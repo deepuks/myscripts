@@ -1,0 +1,9 @@
+# rpm -qa --qf '%{NAME}-%{VERSION}-%{RELEASE}.%{ARCH}\n' | grep -i nscd
+# strace -Tttvo /tmp/perl.st -s 4096 /usr/bin/perl /usr/bin/cpan
+for i in `find /usr/lib64/ -name "*.so"`; do ret=`objdump -p "$i" |grep NEEDED | grep "libgtk."`; if [ -n "$ret" ]; then echo "$i: $ret"; fi ; done
+
+# vgextend vg_dhcp209237 /dev/vdd1 
+# lvextend -L+10G /dev/vg_dhcp209237/lv_root 
+# lvextend -L+10G /dev/vg_dhcp209237/lv_root 
+# resize2fs /dev/vg_dhcp209237/lv_root 
+
