@@ -1,0 +1,7 @@
+# git clone https://github.com/deepuks/myscripts.git
+# cd myscripts
+# git config --global user.email "deepuks86@gmail.com"
+# git config --global user.name "deepuks"
+# git remote set-url origin https://deepuks@github.com/deepuks/myscripts.git
+# git commit -a
+# git push -u origin master
