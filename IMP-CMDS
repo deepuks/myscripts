@@ -7,3 +7,60 @@ for i in `find /usr/lib64/ -name "*.so"`; do ret=`objdump -p "$i" |grep NEEDED |
 # lvextend -L+10G /dev/vg_dhcp209237/lv_root 
 # resize2fs /dev/vg_dhcp209237/lv_root 
 
+# vgextend vg_name /dev/vdd1 
+# # lvextend -L+10G /dev/vg_name/lv_name
+# # xfs_growfs /dev/mapper/vg_name-lv_name
+#
+# # ps -eo uid,uname,pid,ppid,tid,pcpu,pmem,vsz,rss,stat,wchan:25,start_time,time,cmd
+# # ps -axo uid,uname,pid,ppid,tid,pcpu,pmem,vsz,rss,stat,wchan:25,start_time,time,cmd
+# # ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm
+# # ps -axo stat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm
+#
+#
+# # top -n 5 -b > /tmp/top_output.txt
+# # ps -eo uid,uname,pid,ppid,tid,pcpu,pmem,vsz,rss,stat,wchan:25,start_time,time,cmd > /tmp/ps_output.txt
+#
+# # yum reinstall "@X Window System" "@GNOME Desktop Environment"
+# # strace -ffxvto winbind.strace -s 1024 -p <winbind.pid>
+# # strace -ffxvto /tmp/test_strace perf test 5
+#
+# rpm -Va > /tmp/rpm-Va.out 2>&1
+#
+# /lib64/ld-linux-x86-64.so.2
+# /lib64/ld-linux-x86-64.so.2 --list <executable>
+# /lib64/ld-linux-x86-64.so.2 --verify <executable>
+#
+# ps axu | gawk '{count[$NF]++}END{for(j in count) print ""count[j]":",j}'|sort -rn|head -n20
+#
+# # sed -e :a -e '{N; s/\n/,/g; ta}' infile
+#
+# # jar cvmf manifest.txt test.jar FileChooserDemo\$1.class FileChooserDemo.java // mf Manifest jar-filename
+# added manifest
+# adding: FileChooserDemo$1.class(in = 626) (out= 404)(deflated 35%)
+# adding: FileChooserDemo.java(in = 5232) (out= 1719)(deflated 67%)
+# [root@dhcp210-48 new]# ls
+# FileChooserDemo$1.class  FileChooserDemo.class  FileChooserDemo.java  manifest.txt  META-INF  test.jar
+# [root@dhcp210-48 new]# java -jar test.jar 
+#
+# https://docs.oracle.com/javase/tutorial/deployment/jar/build.html
+# http://docs.oracle.com/javase/tutorial/deployment/jar/modman.html
+# http://docs.oracle.com/javase/tutorial/deployment/jar/defman.html
+# http://www.mkyong.com/java/jar-manifest-error-java-io-ioexception-invalid-header-field/
+#
+# deepuks: If you want to configure kernel.core_pattern through sysctl, you can do it in one of the files specified in "man 5 sysctl.conf" and then you must restart systemd-sysctl.service
+#
+# /etc/systemd/system.conf
+# #DefaultLimitCORE=
+#
+# /usr/lib/systemd/system/ntpd.service
+# [Service]
+# Type=forking
+# EnvironmentFile=-/etc/sysconfig/ntpd
+# ExecStart=/usr/sbin/ntpd -u ntp:ntp $OPTIONS
+# PrivateTmp=true
+# LimitCORE=infinity
+#
+# # objdump
+# # eu-readelf --notes coredump
+# # objdump -s coredump
+# # objdump -x coredump | less
