@@ -3,5 +3,8 @@
 # git config --global user.email "deepuks86@gmail.com"
 # git config --global user.name "deepuks"
 # git remote set-url origin https://deepuks@github.com/deepuks/myscripts.git
+# git branch newones 
 # git commit -a
+# git checkout master
+# git merge newones
 # git push -u origin master
